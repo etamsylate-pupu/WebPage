@@ -37,33 +37,33 @@
             var audio = document.getElementById('music1');
             if (audio.paused) {
                 audio.play();
-                document.getElementById('one').src="pause.jpg";
+                document.getElementById('one').src="data/pause.jpg";
              }else{
                 audio.pause();
                 audio.currentTime = 0;//音乐从头播放
-                document.getElementById('one').src="play.jpg";
+                document.getElementById('one').src="data/play.jpg";
             }
         }
         function playMusic2() {
             var audio = document.getElementById('music2');
             if (audio.paused) {
                 audio.play();
-                document.getElementById('two').src="pause.jpg";
+                document.getElementById('two').src="data/pause.jpg";
              }else{
                 audio.pause();
                 audio.currentTime = 0;//音乐从头播放
-                document.getElementById('two').src="play.jpg";
+                document.getElementById('two').src="data/play.jpg";
             }
         }
         function playMusic3() {
             var audio = document.getElementById('music3');
             if (audio.paused) {
                 audio.play();
-                document.getElementById('three').src="pause.jpg";
+                document.getElementById('three').src="data/pause.jpg";
              }else{
                 audio.pause();
                 audio.currentTime = 0;//音乐从头播放
-                document.getElementById('three').src="play.jpg";
+                document.getElementById('three').src="data/play.jpg";
             }
         }
 
@@ -114,7 +114,7 @@
         <!--Wrapper for slides-->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <img src="timg.jpg" alt="..."/>
+                <img src="data/timg.jpg" alt="..."/>
                 <div class="carousel-caption">sheep</div>
             </div>
             <div class="item">
@@ -146,54 +146,23 @@
     <div class="case container">
             <div class="row">
                 <div class="col-md-4">
-                    <img class="img-circle"style="width:50%"src="case1.jpg"/>
+                    <img class="img-circle"style="width:50%"src="data/case1.jpg"/>
                     <h2><abbr title="One Cute Boy" class="initialism">One</abbr></h2>
                     <p>Your happy passer-by all knows, my distressed there is no place hides.</p>
                 </div>
                 <div class="col-md-4">
-                    <img class="img-circle"src="case5.jpg"style="width:70%"/>
+                    <img class="img-circle"src="data/case5.jpg"style="width:70%"/>
                     <h2><abbr title="Two White Cat" class="initialism">Two</abbr></h2>
                     <p>When the whole world is about to rain, let’s make it clear in our heart together.</p>
                 </div>
                 <div class="col-md-4">
-                    <img class="img-circle"src="case7.jpg"style="width:50%"/>
+                    <img class="img-circle"src="data/case7.jpg"style="width:50%"/>
                     <h2><abbr title="Three Funny Monkeies" class="initialism">Three</abbr></h2>
                     <p>I lied when I said I didn’t like you. I lied when I said I didn’t care. I lie every time I try to tell myself I will never fall for you.</p>
                 </div>
             </div>
     </div>
-    <!--
-    <div >
-        <ul class="media-list">
-            <li class="media">
-                <a class="pull-left" hre="#">
-                    <img class="media-object" style=" width:250px height=250px" src="https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=3111269932,2466704314&fm=85&s=F4B857DBE65617DE930C2C16030080C3" alt="我是玩儿"/>
-                </a>
-                <div class="media-body">
-                    <h4 class="media-heading">我不好</h4>
-                    <p>第五排 第六号 我的飞机票  要飞去哪里我不知道  闻着衣服上你的味道 昨天是你生日 有我的生日 说好了晚餐后去看一场电影  像别人那样手牵手 我陪你哭 也逗你笑 我好不好 我总是这样问你 这样骗你 开你玩笑 </p>
-                </div>
-            </li>
-            <li class="media">
-                <a class="pull-left" hre="#">
-                    <img class="media-object" src="http://tp2.sinaimg.cn/3306361973/50/22875318196/0" alt="我不好"/>
-                </a>
-                <div class="media-body">
-                    <h4 class="media-heading">Media Header</h4>
-                    <p>我就是第二个</p>
-                </div>
-            </li>
-            <li class="media">
-                <a class="pull-left" hre="#">
-                    <img class="media-object" src="http://tp4.sinaimg.cn/1167075935/50/22838101204/1" alt="我是玩儿"/>
-                </a>
-                <div class="media-body">
-                    <h4 class="media-heading">Media Header</h4>
-                    <p>我就是第三个</p>
-                </div>
-            </li>
-        </ul>
-    </div>-->
+        
     <div id="albums" style="text-align: center;"><span class="title">Albums</span><br/><span class="glyphicon glyphicon-chevron-down"></span><span class="glyphicon glyphicon-chevron-down"></span><span class="glyphicon glyphicon-chevron-down"></span></div>
     <div class="container screenshot">
         <div class="row item">
@@ -245,17 +214,17 @@
             <div class="col-md-4">
                 <div class="row">
                     <div class="col-md-7">
-                        <img class="img-rounded"style="width:70%"src="crush1.jpg"/>
+                        <img class="img-rounded"style="width:70%"src="data/crush1.jpg"/>
                     </div>
                     <div class="col-md-5">
                         <h3>Crush on you</h3>
                         <p>Leebda</p>
                         <audio id="music1" controls hidden>
-                                <source src="crush.mp3" type="audio/mpeg">
-                                <source src="crush.mp3" type="audio/ogg">
+                                <source src="data/crush.mp3" type="audio/mpeg">
+                                <source src="data/crush.mp3" type="audio/ogg">
                                 Your browser does not support this audio format.
                         </audio>
-                        <img id="one"src="play.jpg" width="30px"height="30px"onclick="playMusic1()"/>
+                        <img id="one"src="data/play.jpg" width="30px"height="30px"onclick="playMusic1()"/>
                          
                     </div>
                 </div>
@@ -268,8 +237,8 @@
                     <div class="col-md-5">
                         <h3>Runnin Back</h3>
                         <p>Black Ocean</p>
-                        <audio id="music2" src="run.mp3"controls hidden></audio>
-                        <img id="two"src="play.jpg" width="30px"height="30px"onclick="playMusic2()"/>
+                        <audio id="music2" src="data/run.mp3"controls hidden></audio>
+                        <img id="two"src="data/play.jpg" width="30px"height="30px"onclick="playMusic2()"/>
                     </div>
                 </div>
             </div>
@@ -281,8 +250,8 @@
                     <div class="col-md-5">
                         <h3>야몽음인 夜夢陰人</h3>
                         <p>Black Ocean</p>
-                        <audio id="music3" src="night.mp3"controls hidden></audio>
-                        <img id="three"src="play.jpg" width="30px"height="30px"onclick="playMusic3()"/>
+                        <audio id="music3" src="data/night.mp3"controls hidden></audio>
+                        <img id="three"src="data/play.jpg" width="30px"height="30px"onclick="playMusic3()"/>
                     </div>
                 </div>
             </div>
@@ -296,7 +265,7 @@
         </footer>
     </div>
     
-    <script src="jquery-3.4.1.js"></script>
+    <script src="data/jquery-3.4.1.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>     
 </body>
 </html>
