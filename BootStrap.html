@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BootStrap</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    
+    <style type="text/css">   
+        .carousel-inner img {
+            width:100%;
+            }
+        p{
+            font-family: cursive;
+            text-indent: 2em;
+        }
+        .screenshot .item {
+            border-top: 1px solid #CCC;
+            padding-bottom: 20px;
+            padding-top: 15px;
+            }
+        .case {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .title{
+            font-family: cursive;
+            font-size:27px;
+        }
+    </style>
+    <script>
+        function like(){
+            $("#like").attr("class",'glyphicon glyphicon-heart');
+        }
+        function playMusic1() {
+            var audio = document.getElementById('music1');
+            if (audio.paused) {
+                audio.play();
+                document.getElementById('one').src="pause.jpg";
+             }else{
+                audio.pause();
+                audio.currentTime = 0;//音乐从头播放
+                document.getElementById('one').src="play.jpg";
+            }
+        }
+        function playMusic2() {
+            var audio = document.getElementById('music2');
+            if (audio.paused) {
+                audio.play();
+                document.getElementById('two').src="pause.jpg";
+             }else{
+                audio.pause();
+                audio.currentTime = 0;//音乐从头播放
+                document.getElementById('two').src="play.jpg";
+            }
+        }
+        function playMusic3() {
+            var audio = document.getElementById('music3');
+            if (audio.paused) {
+                audio.play();
+                document.getElementById('three').src="pause.jpg";
+             }else{
+                audio.pause();
+                audio.currentTime = 0;//音乐从头播放
+                document.getElementById('three').src="play.jpg";
+            }
+        }
+
+    </script>
+
+</head>  
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top"> <!--导航栏的默认样式、顶部固定定位 -->   
+            <div class=container><!--  将contianer放在 nav标签保证导航栏在左右方向上覆盖住整个窗口 -->
+                <div class="navbar-header navbar-left"><!--logo应该放在navbar-header的div元素里 -->
+                    <a href="#" class="navbar-brand">
+                        <img width="30px" height="30px" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2333807719,2046743059&fm=26&gp=0.jpg" /></a>                          
+                </div>
+                         
+                <ul class="nav navbar-nav nav-tabs navbar-left"><!--向左浮动 -->
+                    <li role="presentation" class="active"><a href="#1st"><span class="glyphicon glyphicon-tasks ">&nbspintroduction</span></a></li>
+                    <li role="presentation"><a href="#case"><span class="glyphicon glyphicon-globe ">&nbspcase</span></a></li>
+                    <li role="presentation"><a href="#albums"><span class="glyphicon glyphicon-book">&nbspalbums</span></a></li>
+                    <li role="presentation"><a href="#music"><span class="glyphicon glyphicon-music">&nbspmusic</span></a></li>
+                    <li role="presentation"><a href="#"><span class="glyphicon glyphicon-film">&nbspfilms</span></a></li>   
+                    <li role="presentation"><a href="#"><span class="glyphicon glyphicon-question-sign ">&nbsphelp</span></a></li>
+                    <li role="presentation" class="dropdown"><a href="#"data-toggle="dropdown"><span class="glyphicon glyphicon-wrench">&nbspdeisign</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">one</a></li>
+                            <li><a href="#">two</a></li>
+                            <li><a href="#">three</a></li>
+                        </ul>
+                    </li>                    
+                </ul>
+                                
+                <form class="navbar-form navbar-right">       
+                    <div class="input-group">                  
+                        <input type="text" class="form-control" style="width:320px" placeholder="search"/>
+                        <span class="input-group-addon"><a href="#"><span class="glyphicon glyphicon-search"></span></a></span>
+                    </div>
+              </form>             
+            </div>
+    </nav>
+    <span id="1st"></span>
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="width:100%">
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>            
+        </ol>
+        <!--Wrapper for slides-->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="timg.jpg" alt="..."/>
+                <div class="carousel-caption">sheep</div>
+            </div>
+            <div class="item">
+                <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=420971461,1228345751&fm=26&gp=0.jpg" alt="..."/>
+                <div class="carousel-caption">winter</div>
+            </div>
+            <div class="item">
+                <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3635258262,2669853778&fm=26&gp=0.jpg" alt="..."/>
+                <div class="carousel-caption">honey</div>
+            </div>
+            <div class="item">
+                <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3043141609,10321312&fm=26&gp=0.jpg" alt="..."/>
+                <div class="carousel-caption">snow</div>
+            </div>
+
+        </div>
+        <!--Controls-->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+    <div id="case" style="text-align: center; "><span class="title">Case</span><br/><span class="glyphicon glyphicon-chevron-down"></span><span class="glyphicon glyphicon-chevron-down"></span><span class="glyphicon glyphicon-chevron-down"></span></div>
+    <div class="case container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="img-circle"style="width:50%"src="case1.jpg"/>
+                    <h2><abbr title="One Cute Boy" class="initialism">One</abbr></h2>
+                    <p>Your happy passer-by all knows, my distressed there is no place hides.</p>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-circle"src="case5.jpg"style="width:70%"/>
+                    <h2><abbr title="Two White Cat" class="initialism">Two</abbr></h2>
+                    <p>When the whole world is about to rain, let’s make it clear in our heart together.</p>
+                </div>
+                <div class="col-md-4">
+                    <img class="img-circle"src="case7.jpg"style="width:50%"/>
+                    <h2><abbr title="Three Funny Monkeies" class="initialism">Three</abbr></h2>
+                    <p>I lied when I said I didn’t like you. I lied when I said I didn’t care. I lie every time I try to tell myself I will never fall for you.</p>
+                </div>
+            </div>
+    </div>
+    <!--
+    <div >
+        <ul class="media-list">
+            <li class="media">
+                <a class="pull-left" hre="#">
+                    <img class="media-object" style=" width:250px height=250px" src="https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=3111269932,2466704314&fm=85&s=F4B857DBE65617DE930C2C16030080C3" alt="我是玩儿"/>
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">我不好</h4>
+                    <p>第五排 第六号 我的飞机票  要飞去哪里我不知道  闻着衣服上你的味道 昨天是你生日 有我的生日 说好了晚餐后去看一场电影  像别人那样手牵手 我陪你哭 也逗你笑 我好不好 我总是这样问你 这样骗你 开你玩笑 </p>
+                </div>
+            </li>
+            <li class="media">
+                <a class="pull-left" hre="#">
+                    <img class="media-object" src="http://tp2.sinaimg.cn/3306361973/50/22875318196/0" alt="我不好"/>
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">Media Header</h4>
+                    <p>我就是第二个</p>
+                </div>
+            </li>
+            <li class="media">
+                <a class="pull-left" hre="#">
+                    <img class="media-object" src="http://tp4.sinaimg.cn/1167075935/50/22838101204/1" alt="我是玩儿"/>
+                </a>
+                <div class="media-body">
+                    <h4 class="media-heading">Media Header</h4>
+                    <p>我就是第三个</p>
+                </div>
+            </li>
+        </ul>
+    </div>-->
+    <div id="albums" style="text-align: center;"><span class="title">Albums</span><br/><span class="glyphicon glyphicon-chevron-down"></span><span class="glyphicon glyphicon-chevron-down"></span><span class="glyphicon glyphicon-chevron-down"></span></div>
+    <div class="container screenshot">
+        <div class="row item">
+            <div class="col-md-5"><img class="img-thumbnail"style="width:70% "src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1345745512,1447163477&fm=26&gp=0.jpg"></div>
+            <div class="col-md-7">
+                <h2>Namanana</h2>
+                <p>《Namanana》is Zhang Yixing's third personal music album released on October 19, 2018, which contains 22 songs and is produced by Zhang Yixing. It represents the process to pursue his dream . He hopes his dream will be like a rainforest with vitality. Zhang Yixing hopes to promote m-pop (mando pop Chinese pop music) to the whole world through the album "rain forest of dreams". In the album, Zhang Yixing cooperated with many musicians, including singer Andrew bazzi, producer rice n'peas, production team from the United States, Mars music, and 153 / joombas music group. </p>
+                <div class="otherInfo">
+                    <span class="glyphicon glyphicon-eye-open"></span>&nbsp&nbsp&nbsp
+                    <span class="glyphicon glyphicon-heart-empty" id="like" onclick="like()"></span>&nbsp&nbsp&nbsp
+                    <span class="glyphicon glyphicon-thumbs-up"></span>&nbsp&nbsp&nbsp
+                    <span class="glyphicon glyphicon-share"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row item">
+            <div class="col-md-7">
+                <h2>Lose Control</h2>
+                <p>《Lose control》 is an EP released by Zhang Yixing on October 28, 2016, which includes 6 songs and produced by Zhang Yixing. He hopes that the whole world will lose control when hearing his music, so this EP is called lose control. The concept of EP is expressed through the song name. All song names are connected with one sentence: "when the world is out of control because of music, what do you want? I miss you so much tonight. Let's relax.The six songs in "lose control" EP have different styles, stronger rhythm than traditional Chinese music, and more global arrangement style. The whole EP style is diversified and highly completed, showing Zhang Yixing's musical talent and the control of the first producer. The main song "lose control" is an impressive Pop R &amp; B song with sweet guitar as the main tune, which has both gentle and sexy style. 
+                </p>
+                <div class="otherInfo">
+                    <span class="glyphicon glyphicon-eye-open"></span>&nbsp&nbsp&nbsp
+                    <span class="glyphicon glyphicon-heart-empty"></span>&nbsp&nbsp&nbsp
+                    <span class="glyphicon glyphicon-thumbs-up"></span>&nbsp&nbsp&nbsp
+                    <span class="glyphicon glyphicon-share"></span>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <img class="img-thumbnail"style="width:70%"src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAH0AfQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDweiiimIKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKWkooAD6UEk9afDGssoRpFjB/ibpQsTPL5aYZs4GO9ADKKKKAFApcUUUAGKMUUUAGKMUUUAGKMUUUAGKMUUUAJRS0UAJRS0UAJikp1FADaMU6igBtFLigigBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoBwcjrRU0ESS7t8nlgKSpxnJ9PagCGilIwcGjFAAKWiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBCKSnUYoAbniigiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKWkpwoAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBDSU6koASiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigApwpKUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAJSUGigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiigDJ4oA0NOs2uo5mA/1YBPHrUcsGw12dtpi6R4aVZRiaYeZJ+PQVyVwwLmgCky4puDUrc03FAyOinGm0CCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBDSUppKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK3/B+lf2p4ghV1zBB+9k+g6D8TisCvQPBFo1ppU96eDO2wf7ooAf4qvQ8hjBFcTIcsTWzrUwkvZSDwDgc1iMaQxjU2l+tJTAaRSEU+mkUANooooEFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUANNFKaSgAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAHRo0kiooyzHAHvXq0/laR4XgjGA0cYQD1bHP65rgPDNobnVVfbkRDcPr2re8V6kRKlkrZ8kYb/e70Ac9dS7nbnr1qkxzSsxPOaZSGGc0lL0pKYBSGlooAjPWinkU0g0CEooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBKSlpKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoo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AKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKcKBRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUABppp1JigBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAClFIKcBigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBtFKRSUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUCgBRS0UUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAHUU2nU00AFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUopKdQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFIetLSGgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigBaWkFLQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFIaWkNACUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFKKSlFAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABSGlpDQAlFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABTqaKdQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABSGlpDQAlFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFACgUtIKWgAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACkNLSGgBKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKWgBaKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKQ0tIaAEooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigApaKKAFooooAKKKKACiiigAooooAKKKKACkFFFAC0UUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUhoooASiiigAooooAKKKKAP//Z"/>
+            </div>
+        </div>
+        <div class="row item">
+            <div class="col-md-5"><img class="img-thumbnail"style="width:80%"src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2848431913,570797699&fm=26&gp=0.jpg'/></div>
+            <div class="col-md-7">
+                <h2>Sheep</h2>
+                <p>《Sheep》 is the second album. It contains ten songs. Produced by Zhang Yixing, released on October 7, 2017The album name "sheep" not only has the meaning of sheep, but also comes from Zhang Yixing's nickname "little sheep". Zhang Yixing wants to give back the audience's support in this way. Zhang Yixing hopes to break the public's established impression of "sheep" (i.e. Zhang Yixing) as docile and lovely with this album, presenting Zhang Yixing's three-dimensional and multifaceted nature. In addition, "sheet" is a singular and plural homomorphic word, which means not forgetting the original idea</p>
+                <div class="otherInfo">
+                    <span class="glyphicon glyphicon-eye-open"></span>&nbsp&nbsp&nbsp
+                    <span class="glyphicon glyphicon-heart-empty"></span>&nbsp&nbsp&nbsp
+                    <span class="glyphicon glyphicon-thumbs-up"></span>&nbsp&nbsp&nbsp
+                    <span class="glyphicon glyphicon-share"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="music" style="text-align: center;"><span class="title">Music</span><br/><span class="glyphicon glyphicon-chevron-down"></span><span class="glyphicon glyphicon-chevron-down"></span><span class="glyphicon glyphicon-chevron-down"></span></div>
+    <div class="container" id="music">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-7">
+                        <img class="img-rounded"style="width:70%"src="crush1.jpg"/>
+                    </div>
+                    <div class="col-md-5">
+                        <h3>Crush on you</h3>
+                        <p>Leebda</p>
+                        <audio id="music1" controls hidden>
+                                <source src="crush.mp3" type="audio/mpeg">
+                                <source src="crush.mp3" type="audio/ogg">
+                                Your browser does not support this audio format.
+                        </audio>
+                        <img id="one"src="play.jpg" width="30px"height="30px"onclick="playMusic1()"/>
+                         
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-7">
+                        <img class="img-rounded"style="width:70%"src="crush.jpg"/>
+                    </div>
+                    <div class="col-md-5">
+                        <h3>Runnin Back</h3>
+                        <p>Black Ocean</p>
+                        <audio id="music2" src="run.mp3"controls hidden></audio>
+                        <img id="two"src="play.jpg" width="30px"height="30px"onclick="playMusic2()"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-7">
+                        <img class="img-rounded"style="width:70%"src="night.jpg"/>
+                    </div>
+                    <div class="col-md-5">
+                        <h3>야몽음인 夜夢陰人</h3>
+                        <p>Black Ocean</p>
+                        <audio id="music3" src="night.mp3"controls hidden></audio>
+                        <img id="three"src="play.jpg" width="30px"height="30px"onclick="playMusic3()"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="container-fluid"style="background-color: rgba(184, 182, 177, 0.562);">
+        <footer style="text-align: center">
+            Lay's Music World
+            <a href="">19911007</a>
+        </footer>
+    </div>
+    
+    <script src="jquery-3.4.1.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>     
+</body>
+</html>
